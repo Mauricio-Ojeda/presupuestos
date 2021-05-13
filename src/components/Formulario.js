@@ -32,7 +32,7 @@ const Formulario = ({agregarNuevoGasto}) => {
 				cantidad,
 				id: shortid.generate()
 			}
-		console.log(gasto);
+		
 
 		// pasar el gasto
 

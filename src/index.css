@@ -3,14 +3,17 @@
 }
 body {
   background: #000428;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #000428);  
-  background: linear-gradient(to right, #004e92, #000428); 
+  background-image: url(https://bn1301files.storage.live.com/y4mjMw3tTIbemhS862ymhfcNa6beiVZmr8v0Nz05PeVGJwqi7HQyL0vwR14O1uSdQvrEv_-7XQDiu6vrwJ26fJOqr2sY8nWeA2gKXEz-XWLbS_nBfSGl6B7iIJWqoGfPi92zFl9aQD6MWESZ_6gyICPmjmvOHLa99YIo3e8ANGbHDBXmRoHoE4LN00hMPyDJSJ3?width=1920&height=711&cropmode=none);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;  
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 header {
   margin: 30px 0;
+  height: 100%;
 }
 .contenido {
   padding:20px;
@@ -19,6 +22,7 @@ header {
   background-color: white;
   padding: 30px;
   border-radius: 20px;
+  opacity: 0.93;
 }
 .presupuesto p{
   margin-bottom: 0;
