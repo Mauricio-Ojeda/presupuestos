@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Error from './Error';
+import PropTypes from 'prop-types';
 import shortid  from 'shortid';
 
-const Formulario = ({agregarNuevoGasto}) => {
+const Formulario = ({ setGasto, guardarGasto, actualizarGasto }) => {
 
 	//definir state
 	const [nombre, guardarNombre] = useState('');
@@ -36,13 +37,20 @@ const Formulario = ({agregarNuevoGasto}) => {
 
 		// pasar el gasto
 
-		agregarNuevoGasto( gasto );
-		
-		//resetear el formulario
+		setGasto( gasto );
+
+		// para que se ejecute useEffect
+
+		guardarGasto(true);	
+		actualizarGasto(true);
 
 		
 		// Si pasa validacion
 		actualizarError(false)
+
+		//resetear Formulario
+		guardarNombre('');
+		guardarCantidad(0);
 	}
 
 	return (
@@ -70,8 +78,8 @@ const Formulario = ({agregarNuevoGasto}) => {
 						className="u-full-width" 
 						id="cantidad"
 						placeholder="Ej. 1000"
-						value={cantidad}
-						onChange={ e => guardarCantidad( parseInt(e.target.value, 10) )}
+						value={parseInt(cantidad, 10)}
+						onChange={ e => guardarCantidad( e.target.value )}
 					/>
 				</label>
 				
@@ -84,6 +92,12 @@ const Formulario = ({agregarNuevoGasto}) => {
 
 		</form>
 	)
+}
+
+Formulario.propTypes = {
+	setGasto: PropTypes.func.isRequired,
+	guardarGasto: PropTypes.func.isRequired,
+	actualizarGasto: PropTypes.func.isRequired
 }
 
 export default Formulario
