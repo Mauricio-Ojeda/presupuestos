@@ -6,7 +6,7 @@ const ControlPresupuesto = ({ presupuesto, restante }) => {
     return (
         <Fragment>
             <div className="alert alert-primary">
-                Prresupuesto: $ {presupuesto}
+                Prresupuesto: $ 
             </div>
             <div className="alert">
                 Restante: $ {restante}
