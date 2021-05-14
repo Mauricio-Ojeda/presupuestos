@@ -1,5 +1,6 @@
 import React from 'react';
 import Gasto from './Gasto';
+import PropTypes from 'prop-types'
 
 const Listado = ({gastos}) => {
     return (
@@ -7,12 +8,16 @@ const Listado = ({gastos}) => {
             <h2>Listado</h2>
             {gastos.map(gasto => (
                 <Gasto
-                    id = { gasto.id }
+                    key = { gasto.id }
                     gasto = { gasto }
                 />
             ))}
         </div>
     )
+}
+
+Listado.propTypes = {
+    gastos: PropTypes.array.isRequired
 }
 
 export default Listado
