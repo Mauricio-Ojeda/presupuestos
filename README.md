@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## See a Example Demo
+## See Example Demo
 
 https://nifty-shannon-2d0bc6.netlify.app/
 
